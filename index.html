@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Tanvir 🌸</title>
+<script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #fff8e7, #ffe6f2);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    text-align: center;
+    color: #000;
+  }
+
+  .overlay {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:#efb1b1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:100;
+    flex-direction:column;
+    color:white;
+    font-family:'Itim', cursive;
+    font-size:16px;
+  }
+
+  .love-btn {
+    background:#ff4d6d;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:16px;
+    margin-top:20px;
+    box-shadow:0 0 15px rgba(255,77,109,0.6);
+  }
+
+  #messageContainer {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.2em;
+    color: #e75480;
+  }
+
+  p {
+    font-family:'Itim', cursive;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+
+<div class="overlay" id="overlay">
+  <div>Hey Tanvir! Please touch the ❤️ to continue</div>
+  <button class="love-btn" id="loveBtn">❤️ Touch it ❤️</button>
+</div>
+
+<div id="messageContainer" style="opacity:0;">
+  <h1 id="title"></h1>
+  <p id="message"></p>
+  <img src="C:\Users\Suresh\Desktop\PRANAV SYIT\Gym\n485036.png" alt="Lily" style="width:200px; margin-top:20px; border-radius:15px;">
+</div>
+
+<script>
+const overlay = document.getElementById('overlay');
+const loveBtn = document.getElementById('loveBtn');
+const music = document.getElementById('bgMusic');
+const title = document.getElementById('title');
+const message = document.getElementById('message');
+const messageContainer = document.getElementById('messageContainer');
+
+// On click, hide overlay, start music and show message
+loveBtn.onclick = () => {
+  overlay.style.display='none';
+  messageContainer.style.opacity = 1;
+
+  // Typing animation
+  new TypeIt("#title", { strings: ["Hey Tanvir 🌸"], speed:50 }).go();
+  new TypeIt("#message", {
+    strings: ["I just wanted to say I’m really sorry if I’ve hurt you — that was never my intention.<br>You mean so much to me, more than words can say 💖<br><br>This Diwali, I wish your smile shines brighter than the diyas, and your heart blooms like your favorite lilies 🌷✨<br><br>I promise I’ll always try to make you smile again 😌💗<br><br>-Pranav"],
+    speed:40,
+    breakLines:true
+  }).go();
+};
+</script>
+
+</body>
+</html>
